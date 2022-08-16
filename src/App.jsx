@@ -1,4 +1,6 @@
 import React from 'react';
+import Count from './Count';
+
 
 function App() {
   const [count, setCount] = React.useState(0)
@@ -17,9 +19,7 @@ return (
     <div className="counter">
       <h2><i>The COUNTER</i></h2>
         <button className="counter--minus" disabled={valueOfCounter === 0 ? true : false} onClick={subtract}>-</button>
-        <div className="counter--count">
-            <h1>{count}</h1>
-        </div>
+        <Count number={count}/>
         <button className="counter--plus" onClick={add}>+</button>
     </div>
 )
