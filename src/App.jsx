@@ -10,11 +10,13 @@ function App() {
 function subtract() {
     setCount(prevCount => prevCount - 1)
 }
+ const valueOfCounter = count
+
 
 return (
     <div className="counter">
       <h2><i>The COUNTER</i></h2>
-        <button className="counter--minus" onClick={subtract}>–</button>
+        <button className="counter--minus" disabled={valueOfCounter === 0 ? true : false} onClick={subtract}>-</button>
         <div className="counter--count">
             <h1>{count}</h1>
         </div>
